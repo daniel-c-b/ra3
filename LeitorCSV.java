@@ -25,7 +25,7 @@ public class LeitorCSV {
 	
     int camposTruncados = 0;
 
-    public Leitor(String caminho) throws IOException {
+    public LeitorCSV(String caminho) throws IOException {
         arquivo = new FileReader(caminho);
     }
 
@@ -78,7 +78,7 @@ public class LeitorCSV {
         for (;;) {
             int c = proximoChar();
             if (c == -1) {
-                if (vazio) {
+                if (vazio == 1) {
                     return 0;
                 }
                 return 1;
@@ -116,7 +116,7 @@ public class LeitorCSV {
                     continue;
                 }
                 if (ch == '\n') {
-                    if (vazio) {
+                    if (vazio == 1) {
                         continue;
                     }
                     return 1;
