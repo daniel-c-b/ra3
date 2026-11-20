@@ -26,7 +26,6 @@ class Hashes {
 	}
 	
 	static int posicaoNaTabela(int valorHashado) {
-		int m = 1000003;
-		return (h & 0x7FFFFFFF) % m;
+		return (valorHashado & 0x7FFFFFFF) % 1000003;
 	}
 }
