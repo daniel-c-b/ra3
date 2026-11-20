@@ -4,9 +4,9 @@ import java.io.IOException;
 public class LeitorCSV {
     static final int TAM_BLOCO = 65536;
     static final int MAX_TITULO = 2048;
-    static final int MAX_USUARIO = 64;
-    static final int MAX_NOME = 512;
-    static final int MAX_NOTA = 16;
+    static final int MAX_USUARIO = 2048;
+    static final int MAX_NOME = 2048;
+    static final int MAX_NOTA = 2048;
 
     FileReader arquivo;
     char[] bloco = new char[TAM_BLOCO];
@@ -70,10 +70,10 @@ public class LeitorCSV {
         tamNota = 0;
 
         int coluna = 0;
-        boolean emAspas = 0;
-        boolean aspaFechou = 0;
-        boolean inicioCampo = 1;
-        boolean vazio = 1;
+        int emAspas = 0;
+        int aspaFechou = 0;
+        int inicioCampo = 1;
+        int vazio = 1;
 
         for (;;) {
             int c = proximoChar();
