@@ -63,7 +63,7 @@ public class LeitorCSV {
         }
     }
 
-    int lerLinha() {
+    int lerLinha() throws IOException {
         tamTitulo = 0;
         tamUsuario = 0;
         tamNome = 0;
